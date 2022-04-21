@@ -1,4 +1,4 @@
-package automationfc;
+package test;
  
 import java.util.concurrent.TimeUnit;
  
@@ -10,15 +10,16 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
  
-public class Topic_01_Check_Environment {
+ class Topic_01_Check_Environment  {
 WebDriver driver;
  
 	@BeforeClass
-	public void beforeClass() {
+	public void beforeClass()
+	{
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/libraries/chromedriver");
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://demo.guru99.com/v4/");
+		
+		
 	}
  
 	@Test
